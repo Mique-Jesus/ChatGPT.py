@@ -2,7 +2,6 @@
 Guidelines to use ChatGPT with Python
 
 # **GUIDELINES**
-"""
 
 !pip install openai
 
@@ -20,7 +19,7 @@ def get_completion(prompt, model="gpt-3.5-turbo", temperature=0):
     )
     return response.choices[0].message["content"]
 
-"""**Principle 1: Write clear and specific instructions**"""
+**Principle 1: Write clear and specific instructions**
 
 #Tactic 1: Use delimiters to clearly indicate distinct parts of the input
 text = f"""
