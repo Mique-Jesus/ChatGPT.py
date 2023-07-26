@@ -594,7 +594,7 @@ Text sample: '''{story}'''
 response = get_completion(prompt)
 print(response)
 
-"""# **TRANSFORMING**"""
+# **TRANSFORMING**
 
 #CASE 1: Translation
 prompt = f"""
@@ -710,7 +710,7 @@ Text: ```{text}```
 response = get_completion(prompt)
 display(Markdown(response))
 
-"""# **EXPANDING**"""
+# **EXPANDING**
 
 #Customize the automated reply to a customer email
 #review for a blender:
