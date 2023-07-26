@@ -101,7 +101,7 @@ print(response)
 
 **Principle 2: Give the model time to “think”**
 
-#Tactic 1: Specify the steps required to complete a complex task
+**#Tactic 1:** Specify the steps required to complete a complex task
 text = f"""
 In a charming village, siblings Jack and Jill set out on \
 a quest to fetch water from a hilltop \
@@ -140,7 +140,7 @@ response = get_completion(prompt_1)
 print("Completion for prompt 1:")
 print(response)
 
-#Tactic 2: Instruct the model to work out its own solution before rushing to a conclusion
+**#Tactic 2:** Instruct the model to work out its own solution before rushing to a conclusion
 ##Bad example: The student's solution is incorrect, but the assessing conclude the opposite
 prompt = f"""
 Determine if the student's solution is correct or not.
@@ -227,7 +227,7 @@ Actual solution:
 response = get_completion(prompt)
 print(response)
 
-"""**Model Limitations:** **Hallucinations**"""
+**Model Limitations:** **Hallucinations**
 
 #Boie is a real company, the product name is not real.
 prompt = f"""
@@ -236,7 +236,7 @@ Tell me about AeroGlide UltraSlim Smart Toothbrush by Boie
 response = get_completion(prompt)
 print(response)
 
-"""# **ITERATIVE**"""
+# **ITERATIVE**
 
 fact_sheet_chair = """
 OVERVIEW
@@ -356,7 +356,7 @@ print(response)
 from IPython.display import display, HTML
 display(HTML(response))
 
-"""# **SUMMARIZING**"""
+# **SUMMARIZING**
 
 prod_review = """
 Got this panda plush toy for my daughter's birthday, \
@@ -408,7 +408,7 @@ print(response)
 
 review_1 = prod_review
 
-# review for a standing lamp
+#review for a standing lamp
 review_2 = """
 Needed a nice lamp for my bedroom, and this one \
 had additional storage and not too high of a price \
@@ -422,7 +422,7 @@ to be a great company that cares about their customers \
 and products.
 """
 
-# review for an electric toothbrush
+#review for an electric toothbrush
 review_3 = """
 My dental hygienist recommended an electric toothbrush, \
 which is why I got this. The battery life seems to be \
@@ -459,7 +459,7 @@ for i in range(len(reviews)):
     response = get_completion(prompt)
     print(i, response, "\n")
 
-"""# **INFERRING**"""
+# **INFERRING**
 
 #CASE 1: Inferring sentiments
 lamp_review = """
