@@ -21,7 +21,7 @@ def get_completion(prompt, model="gpt-3.5-turbo", temperature=0):
 
 **Principle 1: Write clear and specific instructions**
 
-#Tactic 1: Use delimiters to clearly indicate distinct parts of the input
+**#Tactic 1:** Use delimiters to clearly indicate distinct parts of the input
 text = f"""
 You should express what you want a model to do by \
 providing instructions that are as clear and \
@@ -42,7 +42,7 @@ into a single sentence.
 response = get_completion(prompt)
 print(response)
 
-#Tactic 2: Ask for a structured output
+**#Tactic 2:** Ask for a structured output
 prompt = f"""
 Generate a list of three made-up book titles along \
 with their authors and genres.
@@ -52,7 +52,7 @@ book_id, title, author, genre.
 response = get_completion(prompt)
 print(response)
 
-#Tactic 3: Ask the model to check whether conditions are satisfied
+**#Tactic 3:** Ask the model to check whether conditions are satisfied
 text_1 = f"""
 Making a cup of tea is easy! First, you need to get some \
 water boiling. While that's happening, \
@@ -83,7 +83,7 @@ response = get_completion(prompt)
 print("Completion for Text 1:")
 print(response)
 
-#Tactic 4: "Few-shot" prompting (Give successful examples of completing tasks)
+**#Tactic 4:** "Few-shot" prompting (Give successful examples of completing tasks)
 prompt = f"""
 Your task is to answer in a consistent style.
 
@@ -99,7 +99,7 @@ the most intricate tapestry begins with a solitary thread.
 response = get_completion(prompt)
 print(response)
 
-"""**Principle 2: Give the model time to “think”**"""
+**Principle 2: Give the model time to “think”**
 
 #Tactic 1: Specify the steps required to complete a complex task
 text = f"""
@@ -129,7 +129,7 @@ Text:
 ```{text}```
 """
 
-# we can indicate "Use the following format" in the prompt:
+#we can indicate "Use the following format" in the prompt:
 #Text: <text to summarize>
 #Summary: <summary>
 #Translation: <summary translation>
