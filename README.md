@@ -7,7 +7,7 @@ Guidelines to use ChatGPT with Python
 
 #Code that loads the OpenAI API key for you
 import openai
-openai.api_key = "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" #enter here your api key
+openai.api_key = "sk-..." #enter here your api key
 
 #This helper function will make it easier to use prompts and look at the generated outputs
 def get_completion(prompt, model="gpt-3.5-turbo", temperature=0):
