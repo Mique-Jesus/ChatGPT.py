@@ -5,12 +5,12 @@ Guidelines to use ChatGPT with Python
 
 !pip install openai
 
-#Code that loads the OpenAI API key for you
-import openai
-openai.api_key = "sk-..." #enter here your api key
+#Code that loads the OpenAI API key for you \
+import openai \
+openai.api_key = "sk-..." #enter here your api key 
 
 #This helper function will make it easier to use prompts and look at the generated outputs \
-def get_completion(prompt, model="gpt-3.5-turbo", temperature=0):
+def get_completion(prompt, model="gpt-3.5-turbo", temperature=0): 
     messages = [{"role": "user", "content": prompt}]
     response = openai.ChatCompletion.create(
         model=model,
@@ -21,7 +21,7 @@ def get_completion(prompt, model="gpt-3.5-turbo", temperature=0):
 
 **Principle 1: Write clear and specific instructions**
 
-**#Tactic 1:** Use delimiters to clearly indicate distinct parts of the input
+**#Tactic 1:** Use delimiters to clearly indicate distinct parts of the input \
 text = f"""
 You should express what you want a model to do by \
 providing instructions that are as clear and \
@@ -33,16 +33,16 @@ clear prompt with writing a short prompt. \
 In many cases, longer prompts provide more clarity \
 and context for the model, which can lead to \
 more detailed and relevant outputs.
-"""
+""" \
 prompt = f"""
 Summarize the text delimited by triple backticks \
 into a single sentence.
 ```{text}```
-"""
-response = get_completion(prompt)
+""" \
+response = get_completion(prompt) \
 print(response)
 
-**#Tactic 2:** Ask for a structured output
+**#Tactic 2:** Ask for a structured output \
 prompt = f"""
 Generate a list of three made-up book titles along \
 with their authors and genres.
@@ -52,7 +52,7 @@ book_id, title, author, genre.
 response = get_completion(prompt)
 print(response)
 
-**#Tactic 3:** Ask the model to check whether conditions are satisfied
+**#Tactic 3:** Ask the model to check whether conditions are satisfied \
 text_1 = f"""
 Making a cup of tea is easy! First, you need to get some \
 water boiling. While that's happening, \
@@ -83,7 +83,7 @@ response = get_completion(prompt)
 print("Completion for Text 1:")
 print(response)
 
-**#Tactic 4:** "Few-shot" prompting (Give successful examples of completing tasks)
+**#Tactic 4:** "Few-shot" prompting (Give successful examples of completing tasks) \
 prompt = f"""
 Your task is to answer in a consistent style.
 
